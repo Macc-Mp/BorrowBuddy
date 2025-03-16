@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lendly</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/normzalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    
+    <main>
+     
+      <section class="borrow">
+        <div class="container">
+          <div class="borrow-form">
+            <div class="borrow__title-container">
+              <h2 class="borrow-form__title">
+                Add new record
+              </h2>
+              <div class="borrow__line-layout"></div>
+            </div>
+
+
+		
+            <form action="connectTo.php" method="post">
+              <div class="borrow-form__body">
+                <div class="borrow-form__row">
+				<input
+                    type="text"
+                    placeholder="Username"
+                    class="borrow-form__input"
+					name ="username"
+					
+                    required
+                    pattern="^[a-zA-Z0-9]{5,15}$"
+                    title="Username must be 5-15 alphanumeric characters."
+                  />
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    class="borrow-form__input"
+					name ="email"
+					
+                    required
+                    title="Please enter a valid email address."
+                  />
+                </div>
+                <div class="borrow-form__row">
+                  <input
+                    type="text"
+                    placeholder="ID"
+                    class="borrow-form__input"
+					name="id"
+					
+                    required
+                    pattern="^\d{1,10}$"
+                    title="ID must be a numeric value between 1 to 10 digits."
+                  />
+                  <select 
+		    style = "color : #000000;"
+                    name="chosenItem"
+                    class="select-margin borrow-form__input"
+                    required
+                    title="Please select an item to borrow."
+		
+                  >
+                    <option value="Choose an Item" disabled selected>
+                      Choose an Item
+                    </option>
+                    <option class="option-name" value="Book Return Drop Box">
+                      Book Return Drop Box
+                    </option>
+                    <option class="option-name" value="Book Stands">
+                      Book Stands
+                    </option>
+                    <option class="option-name" value="Bookshelves">
+                      Bookshelves
+                    </option>
+                    <option class="option-name" value="Chairs">Chairs</option>
+                    <option class="option-name" value="Clock">Clock</option>
+                    <option class="option-name" value="Computer">
+                      Computer
+                    </option>
+                    <option class="option-name" value="E-Books">E-Books</option>
+                    <option class="option-name" value="Headphones">
+                      Headphones
+                    </option>
+                    <option class="option-name" value="Lamps">Lamps</option>
+                    <option class="option-name" value="Printers">
+                      Printers
+                    </option>
+                    <option class="option-name" value="Projectors">
+                      Projectors
+                    </option>
+                    <option class="option-name" value="Study Carrels">
+                      Study Carrels
+                    </option>
+                    <option class="option-name" value="Tables">Tables</option>
+                    <option class="option-name" value="Whiteboards">
+                      Whiteboards
+                    </option>
+                    <option class="option-name" value="Wi-Fi Router">
+                      Wi-Fi Router
+                    </option>
+                  </select>
+
+
+                </div>
+              </div>
+              <button class="borrow-form__button" input type="submit">Borrow</button>
+            </form>
+	
+          </div>	  
+
+        </div>	
+      </section>
+		 
+	  
+    </main>
+    <footer>
+     
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
